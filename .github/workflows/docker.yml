@@ -11,7 +11,8 @@ defaults:
     shell: bash
 
 env:
-  DOCKER_REPO: lightninglabs
+  #DOCKER_REPO: lightninglabs
+  DOCKER_REPO: thinkmassive
   DOCKER_IMAGE: lndmon
 
 jobs:
