@@ -14,6 +14,7 @@ env:
   #DOCKER_REPO: lightninglabs
   DOCKER_REPO: thinkmassive
   DOCKER_IMAGE: lndmon
+  DOCKER_REGISTRY: ghcr.io
 
 jobs:
   main:
@@ -35,13 +36,37 @@ jobs:
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
 
       - name: Build and push
-        id: docker_build
+        id: docker_build_dockerhub
         uses: lightninglabs/gh-actions/build-push-action@39555064b3ae5c6d5c71a8ab304355faeaf3f4d4
         with:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: "${{ env.DOCKER_REPO }}/${{ env.DOCKER_IMAGE }}:${{ env.RELEASE_VERSION }}"
           build-args: checkout=${{ env.RELEASE_VERSION }}
+
+      - name: Login to Github container registry
+        id: docker_login_ghcr
+        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: docker_meta_ghcr
+        uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
+        with:
+          images: "${{ env.DOCKER_REGISTRY }}/${{ env.DOCKER_REPO }}/${{ env.DOCKER_IMAGE}}:${{ env.RELEASE_VERSION }}"
+
+      - name: Build and push Docker image to Github container registry
+        id: docker_build_ghcr
+        uses: lightninglabs/gh-actions/build-push-action@39555064b3ae5c6d5c71a8ab304355faeaf3f4d4
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.docker_meta_ghcr.outputs.tags }}
+          labels: ${{ steps.${{ steps.docker_meta_ghcr.outputs.labels }}
+          build-args: ${{ env.RELEASE_VERSION }}
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
