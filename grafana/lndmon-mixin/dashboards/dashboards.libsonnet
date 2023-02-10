@@ -41,5 +41,11 @@
     #      ))
     #    )
     #  ),
+    'chain.json': (import 'chain.json'),
+    'channels.json': (import 'channels.json'),
+    'network.json': (import 'network.json'),
+    'peers.json': (import 'peers.json'),
+    'perf.json': (import 'perf.json'),
+    'routing.json': (import 'routing.json'),
   },
 }
