@@ -21,6 +21,7 @@
 
     * Utilizing the `monitoring` build tag requires building lnd from source. To build lnd from source, follow the instructions [here](https://github.com/lightningnetwork/lnd/blob/master/docs/INSTALL.md) except instead of running `make && make install`, run `make && make install tags=monitoring`.
 - In `lndmon/.env`, fill in the `TLS_CERT_PATH` and `MACAROON_PATH` variables. By default, `.lnd` lives in your home directory.
+   * for macaroon, `readonly` permission is sufficient for `lndmon`
 - If you wish to run `lndmon` connecting to an lnd node on testnet or simnet:
    * modify the `lndmon/.env` `LND_NETWORK` variable to match your desired network.
    * make sure the `MACAROON_PATH` matches the desired network as well.
