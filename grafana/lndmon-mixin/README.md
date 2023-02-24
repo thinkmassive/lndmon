@@ -12,6 +12,9 @@ Install tooling:
 go install github.com/google/go-jsonnet/cmd/jsonnet@latest
 go install github.com/jsonnet-bundler/jsonnet-bundler/cmd/jb@latest
 go install github.com/monitoring-mixins/mixtool/cmd/mixtool@main
+
+jb init
+jb install https://github.com/grafana/grafonnet-lib/grafonnet
 ```
 
 Generate dashboards:
@@ -193,3 +196,16 @@ done
 ## Next Steps
 - Polar: add polarlightning/lnd:0.15.5 to GUI
 - Polar: add "Enable Prometheus" option for lnd nodes
+
+---
+
+## References
+- [Grafonnet docs](https://grafana.github.io/grafonnet-lib/)
+- grafana/[grafonnet-lib](https://github.com/grafana/grafonnet-lib) jsonnet library for generating Grafana dashboard files
+- tutorial: [Grafana Dashboards as Code with Grafonnet](https://www.novatec-gmbh.de/en/blog/grafana-dashboards-as-code-with-grafonnet/)
+- [Grafana Dashboard JSON Model](https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/view-dashboard-json-model/)
+- JSON diff: [website](https://jsondiff.com/), [source code](https://github.com/zgrossbart/jdd)
+- rhowe/[grafonnet-lib](https://github.com/rhowe/grafonnet-lib/) fork w/support for recent Grafana features
+- [grafanalib](https://grafanalib.readthedocs.io/en/stable/) alternative dashboard-as-code tool in python
+- Grafana docs
+  - [panel types](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/)
