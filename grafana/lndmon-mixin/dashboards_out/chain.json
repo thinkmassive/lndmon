@@ -1,21 +1,14 @@
 {
+      "__inputs": [ ],
+      "__requires": [ ],
       "annotations": {
-         "list": [
-            {
-               "builtIn": 1,
-               "datasource": "-- Grafana --",
-               "enable": true,
-               "hide": true,
-               "iconColor": "rgba(0, 211, 255, 1)",
-               "name": "Annotations & Alerts",
-               "type": "dashboard"
-            }
-         ]
+         "list": [ ]
       },
       "editable": true,
       "gnetId": null,
       "graphTooltip": 0,
-      "id": 6,
+      "hideControls": false,
+      "id": null,
       "links": [ ],
       "panels": [
          {
@@ -25,19 +18,23 @@
             "dashes": false,
             "datasource": "$datasource",
             "fill": 1,
+            "fillGradient": 0,
             "gridPos": {
                "h": 8,
                "w": 23,
                "x": 0,
                "y": 0
             },
-            "id": 4,
+            "id": 2,
             "legend": {
+               "alignAsTable": false,
                "avg": false,
                "current": false,
                "max": false,
                "min": false,
+               "rightSide": false,
                "show": true,
+               "sideWidth": null,
                "total": false,
                "values": false
             },
@@ -45,11 +42,11 @@
             "linewidth": 1,
             "links": [ ],
             "nullPointMode": "null",
-            "options": { },
             "percentage": false,
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
+            "repeat": null,
             "seriesOverrides": [ ],
             "spaceLength": 10,
             "stack": false,
@@ -72,7 +69,6 @@
             ],
             "thresholds": [ ],
             "timeFrom": null,
-            "timeRegions": [ ],
             "timeShift": null,
             "title": "On-Chain Wallet Balance",
             "tooltip": {
@@ -105,11 +101,7 @@
                   "min": null,
                   "show": true
                }
-            ],
-            "yaxis": {
-               "align": false,
-               "alignLevel": null
-            }
+            ]
          },
          {
             "aliasColors": { },
@@ -118,19 +110,23 @@
             "dashes": false,
             "datasource": "$datasource",
             "fill": 1,
+            "fillGradient": 0,
             "gridPos": {
                "h": 8,
                "w": 12,
                "x": 0,
                "y": 8
             },
-            "id": 8,
+            "id": 3,
             "legend": {
+               "alignAsTable": false,
                "avg": false,
                "current": false,
                "max": false,
                "min": false,
+               "rightSide": false,
                "show": true,
+               "sideWidth": null,
                "total": false,
                "values": false
             },
@@ -138,11 +134,11 @@
             "linewidth": 1,
             "links": [ ],
             "nullPointMode": "null",
-            "options": { },
             "percentage": false,
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
+            "repeat": null,
             "seriesOverrides": [ ],
             "spaceLength": 10,
             "stack": false,
@@ -165,7 +161,6 @@
             ],
             "thresholds": [ ],
             "timeFrom": null,
-            "timeRegions": [ ],
             "timeShift": null,
             "title": "UTXO Counts",
             "tooltip": {
@@ -198,11 +193,7 @@
                   "min": null,
                   "show": true
                }
-            ],
-            "yaxis": {
-               "align": false,
-               "alignLevel": null
-            }
+            ]
          },
          {
             "aliasColors": { },
@@ -211,19 +202,23 @@
             "dashes": false,
             "datasource": "$datasource",
             "fill": 1,
+            "fillGradient": 0,
             "gridPos": {
                "h": 8,
                "w": 12,
                "x": 12,
                "y": 8
             },
-            "id": 6,
+            "id": 4,
             "legend": {
+               "alignAsTable": false,
                "avg": false,
                "current": false,
                "max": false,
                "min": false,
+               "rightSide": false,
                "show": true,
+               "sideWidth": null,
                "total": false,
                "values": false
             },
@@ -231,11 +226,11 @@
             "linewidth": 1,
             "links": [ ],
             "nullPointMode": "null",
-            "options": { },
             "percentage": false,
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
+            "repeat": null,
             "seriesOverrides": [ ],
             "spaceLength": 10,
             "stack": false,
@@ -265,7 +260,6 @@
             ],
             "thresholds": [ ],
             "timeFrom": null,
-            "timeRegions": [ ],
             "timeShift": null,
             "title": "UTXO Sizes",
             "tooltip": {
@@ -298,11 +292,7 @@
                   "min": null,
                   "show": true
                }
-            ],
-            "yaxis": {
-               "align": false,
-               "alignLevel": null
-            }
+            ]
          },
          {
             "aliasColors": { },
@@ -311,19 +301,23 @@
             "dashes": false,
             "datasource": "$datasource",
             "fill": 1,
+            "fillGradient": 0,
             "gridPos": {
                "h": 9,
                "w": 12,
                "x": 0,
                "y": 16
             },
-            "id": 2,
+            "id": 5,
             "legend": {
+               "alignAsTable": false,
                "avg": false,
                "current": false,
                "max": false,
                "min": false,
+               "rightSide": false,
                "show": true,
+               "sideWidth": null,
                "total": false,
                "values": false
             },
@@ -331,11 +325,11 @@
             "linewidth": 1,
             "links": [ ],
             "nullPointMode": "null",
-            "options": { },
             "percentage": false,
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
+            "repeat": null,
             "seriesOverrides": [ ],
             "spaceLength": 10,
             "stack": false,
@@ -351,7 +345,6 @@
             ],
             "thresholds": [ ],
             "timeFrom": null,
-            "timeRegions": [ ],
             "timeShift": null,
             "title": "Block Height",
             "tooltip": {
@@ -384,14 +377,12 @@
                   "min": null,
                   "show": true
                }
-            ],
-            "yaxis": {
-               "align": false,
-               "alignLevel": null
-            }
+            ]
          }
       ],
-      "schemaVersion": 18,
+      "refresh": "",
+      "rows": [ ],
+      "schemaVersion": 14,
       "style": "dark",
       "tags": [
          "lightning-network"
@@ -400,26 +391,22 @@
          "list": [
             {
                "current": {
-                  "tags": [ ],
                   "text": "default",
                   "value": "default"
                },
                "hide": 0,
-               "includeAll": false,
                "label": null,
-               "multi": false,
                "name": "datasource",
                "options": [ ],
                "query": "prometheus",
                "refresh": 1,
                "regex": "",
-               "skipUrlSync": false,
                "type": "datasource"
             },
             {
                "allValue": null,
+               "current": { },
                "datasource": "$datasource",
-               "definition": "label_values(namespace)",
                "hide": 0,
                "includeAll": false,
                "label": "namespace",
@@ -429,8 +416,7 @@
                "query": "label_values(namespace)",
                "refresh": 1,
                "regex": "",
-               "skipUrlSync": false,
-               "sort": 5,
+               "sort": "1",
                "tagValuesQuery": "",
                "tags": [ ],
                "tagsQuery": "",
@@ -439,8 +425,8 @@
             },
             {
                "allValue": null,
+               "current": { },
                "datasource": "$datasource",
-               "definition": "label_values(lnd_chain_block_timestamp{namespace=\"$namespace\"}, pod)",
                "hide": 0,
                "includeAll": false,
                "label": "node",
@@ -450,8 +436,7 @@
                "query": "label_values(lnd_chain_block_timestamp{namespace=\"$namespace\"}, pod)",
                "refresh": 1,
                "regex": "",
-               "skipUrlSync": false,
-               "sort": 0,
+               "sort": "1",
                "tagValuesQuery": "",
                "tags": [ ],
                "tagsQuery": "",
@@ -489,8 +474,7 @@
             "30d"
          ]
       },
-      "timezone": "",
+      "timezone": "browser",
       "title": "Chain State",
-      "uid": "ifn33ANWz",
-      "version": 2
+      "version": 0
    }
