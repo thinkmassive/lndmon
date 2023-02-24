@@ -45,3 +45,8 @@ services:
 volumes:
   grafana-storage:
   prometheus-storage:
+
+networks:
+  default:
+    external: true
+    name: 2_default
