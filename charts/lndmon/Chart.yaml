@@ -1,0 +1,7 @@
+apiVersion: v2
+name: lndmon
+description: Prometheus metrics exporter for Lightning Network Daemon
+type: application
+
+version: 0.1.0
+appVersion: "v0.2.7"
